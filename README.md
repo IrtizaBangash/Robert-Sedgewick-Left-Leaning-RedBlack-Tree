@@ -52,7 +52,7 @@ print(llrb.Search(100))
 ```
 
 ## Code used for visual representation of tree.
-
+pylab and matplotlib packages must be downloaded.
 ```
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
