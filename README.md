@@ -50,3 +50,50 @@ for i in range(50):
 print(llrb.Search(46))
 print(llrb.Search(100))
 ```
+
+## Code used for visual representation of tree.
+
+```
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+import pylab
+
+#a graphical representation of the left leaning red black tree (plot_tree, below, uses plot_node)
+def plot_node(node, rb=True, level=1, posx=0, posy=0):
+    width = 2000.0 * (0.5 ** (level))  # This will be used to space nodes horizontally
+    if node.color == 0 or rb == False:
+        plt.text(posx, posy, str(node.data), horizontalalignment='center', color='k', fontsize=10)
+    else:
+        plt.text(posx, posy, str(node.data), horizontalalignment='center', color='r', fontsize=10)
+
+    if node.left:
+        px = [posx, posx - width]
+        py = [posy - 1, posy - 15]
+        if node.left.color == 0 or rb == False:
+            plt.plot(px, py, 'k-')#, hold=True
+        else:
+            plt.plot(px, py, 'r-')#, hold=True
+        plot_node(node.left, rb, level + 1, posx - int(width), posy - 20)
+
+    if node.right:
+        plot_node(node.right, rb, level + 1, posx + int(width), posy - 20)
+        px = [posx, posx + width]
+        py = [posy - 1, posy - 15]
+        if node.right.color == 0 or rb == False:
+            plt.plot(px, py, 'k-')#, hold=True
+        else:
+            plt.plot(px, py, 'r-')#, hold=True
+
+
+def plot_tree(node, figsize=(10, 6)):
+    if node.color == True:
+        rb = False
+    else:
+        rb = True
+    rcParams['figure.figsize'] = figsize
+    fig, ax = plt.subplots()
+    ax.axis('off')
+    plot_node(node, rb)
+    plt.show()
+```
+
