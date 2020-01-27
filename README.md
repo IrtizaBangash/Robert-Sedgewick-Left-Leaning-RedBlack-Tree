@@ -4,7 +4,7 @@
 -Fatima Ilyas
 ## Function Calls:
 
-###1:Insert Function call
+### 1:Insert Function call
 
 ```
 #testing insert function
@@ -22,7 +22,7 @@ plot_tree(llrb.root, figsize=(10,2))
 ```
 if the nodes on matplotlib window are conjusted, stretch the window a bit.
 
-###2:Delete Function call
+### 2:Delete Function call
 Only takes an existing node as argument.
 Do not enter any value which is not already present in the tree already. Doing so will raise a NoneType error.
 ```
@@ -40,7 +40,7 @@ plot_tree(llrb.root, figsize=(10,2))
 ```
 if the nodes on matplotlib window are conjusted, stretch the window a bit.
 
-###2:Search Function call
+### 3:Search Function call
 Takes any value as an input. But the value should be of the same data type.
 Looks up a value and returns true if it exists, false otherwise.
 ```
