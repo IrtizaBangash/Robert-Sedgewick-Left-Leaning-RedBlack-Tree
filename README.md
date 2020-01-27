@@ -1,7 +1,7 @@
 # Robert-Sedgewick-Left-Leaning-RedBlack-Tree
--Irtiza Bangash 
--Khurram Khalil 
--Fatima Ilyas
+Irtiza Bangash 
+Khurram Khalil 
+Fatima Ilyas
 ## Function Calls:
 
 ### 1:Insert Function call
