@@ -51,6 +51,10 @@ print(llrb.Search(46))
 print(llrb.Search(100))
 ```
 
+
+I have made separate functions available in my file outside the class to test the above mentioned functions.
+
+
 ## Code used for visual representation of tree.
 pylab and matplotlib packages must be downloaded.
 ```
